@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Celestial & Weather Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay loop muted playsinline id="weather-video">
+            <source src="videos/clear.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="weather-container">
+        <h2>🌌 Weather Agent</h2>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Enter city (e.g., Mumbai)..." autocomplete="off">
+            <button id="search-btn">Search</button>
+        </div>
+        <p class="or-text">-- OR --</p>
+        <button id="location-btn">Use GPS Location</button>
+
+        <div id="weather-info" class="hidden">
+            <h3 id="city">City Name</h3>
+<p id="local-time" style="font-size: 14px; opacity: 0.8; margin-top: -5px; margin-bottom: 15px; color: #f1c40f; font-weight: 500;">Time: --:--</p>
+<p id="time-status" style="font-size: 12px; opacity: 0.7; margin-top: -12px; margin-bottom: 15px; font-style: italic; letter-spacing: 0.5px;">Status</p>
+            <h1 id="temp">--°C</h1>
+            <p id="description">Clear Sky</p>
+            
+            <div class="astro-grid">
+                <div class="astro-item">🌅 <strong>Sunrise:</strong> <span id="sunrise">--:-- AM</span></div>
+                <div class="astro-item">🌇 <strong>Sunset:</strong> <span id="sunset">--:-- PM</span></div>
+                <div class="astro-item">🌙 <strong>Moonrise:</strong> <span id="moonrise">--:--</span></div>
+                <div class="astro-item">🌘 <strong>Moon Phase:</strong> <span id="moonphase">--</span></div>
+            </div>
+
+            <div class="ai-agent-box">
+                <h4>✨ AI Agent Space Diagnostics</h4>
+                <p id="astro-alert">Awaiting location parameters...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
